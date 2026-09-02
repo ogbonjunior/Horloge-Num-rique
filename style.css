@@ -5,14 +5,19 @@ body {
     background-image: 
     linear-gradient(to bottom, rgba(10,10,10,0.2)0%, rgba(10,10,10,0.2)100%),
     url('Image/Image 1.jpg');
-    height: 100vh;
-    width: 100vW;
+    min-height: 100vh;
+    min-height: 100svh;
+    width: 100%;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: center;
+    background-size: cover;
 }
 
 .horloge {
+    width: min(100%, 500px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,17 +27,21 @@ body {
 }
 
 .heures {
-    width: 500px;
-    font-size: 100px;
+    width: 100%;
+    font-size: clamp(3rem, 12vw, 100px);
     font-family: 'Orbitron', sans-serif ;
     font-weight: 700;
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(10,10,10,0.2);
+    text-align: center;
+    white-space: nowrap;
 }
 
 .date {
-    font-size: 25px;
+    width: 100%;
+    font-size: clamp(1rem, 4vw, 25px);
     font-family: 'Nunito Sans', sans-serif;
     padding-top: 10px;
+    text-align: center;
 }
 
